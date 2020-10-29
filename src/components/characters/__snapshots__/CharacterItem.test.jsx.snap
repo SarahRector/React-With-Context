@@ -6,6 +6,7 @@ exports[`CharacterItem component renders CharacterItem 1`] = `
     <img
       alt="Arnold"
       src="test.png"
+      width="150px"
     />
     <figcaption>
       Arnold

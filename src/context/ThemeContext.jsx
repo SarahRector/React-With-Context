@@ -5,17 +5,21 @@ export const ThemeContext = React.createContext();
 
 // eslint-disable-next-line react/prop-types
 export const ThemeProvider = ({ children }) => {
-  const [themeType, setThemeType] = useState('lightTheme');
+  const [theme, setThemeType] = useState('light');
 
   const toggle = () => {
-    setThemeType(oldType => {
-      if(oldType === 'lightTheme') return 'darkTheme';
-      return 'lightTheme';
-    });
+    if(theme === 'light') setThemeType('dark');
+    if(theme === 'dark') setThemeType('light');
+    console.log(theme);
+  };
+
+  const bucket = {
+    theme,
+    toggle
   };
 
   return (
-    <ThemeContext.Provider value={{ themeType, toggle }}>
+    <ThemeContext.Provider value={bucket}>
       {children}
     </ThemeContext.Provider>
   );
