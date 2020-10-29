@@ -24,7 +24,7 @@ describe('darkmode theme list', () => {
     fireEvent.click(button);
 
     return waitFor(() => {
-      expect(characters).toHaveClass('CharacterList light');
+      expect(characters).toHaveClass('CharacterList dark');
     });
   });
 });

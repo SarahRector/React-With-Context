@@ -2,7 +2,9 @@
 
 exports[`CharacterItem component renders CharacterItem 1`] = `
 <DocumentFragment>
-  <figure>
+  <figure
+    class="light"
+  >
     <img
       alt="Arnold"
       src="test.png"
